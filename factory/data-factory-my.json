@@ -1,0 +1,15 @@
+{
+	"name": "data-factory-my",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "94fba7f2-5f91-47e9-845f-7135899a1e58",
+		"tenantId": "2da40318-46be-402c-ba75-cfb1f656567d"
+	}
+}
