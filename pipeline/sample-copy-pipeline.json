@@ -35,16 +35,6 @@
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "Append variable1",
-				"type": "AppendVariable",
-				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "test",
-					"value": ""
-				}
 			}
 		],
 		"variables": {
