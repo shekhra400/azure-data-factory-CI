@@ -1,0 +1,28 @@
+{
+	"name": "sink_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blob-storage-linked-service",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"path": {
+				"type": "String",
+				"defaultValue": "/sample/sink"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "output.json",
+				"folderPath": "sample/sink",
+				"container": "sink-container"
+			},
+			"encodingName": "UTF-8"
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

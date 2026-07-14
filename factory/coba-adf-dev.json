@@ -1,0 +1,15 @@
+{
+	"name": "coba-adf-dev",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e390aa99-9e75-4dd0-90d6-50ba2b312ba5",
+		"tenantId": "2da40318-46be-402c-ba75-cfb1f656567d"
+	}
+}
