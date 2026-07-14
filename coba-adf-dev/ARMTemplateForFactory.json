@@ -28,7 +28,7 @@
 				"description": "Sample copy pipeline with Key Vault-backed linked service",
 				"activities": [
 					{
-						"name": "CopyActivity",
+						"name": "CopyActivity_updated",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -40,10 +40,24 @@
 						"userProperties": [],
 						"typeProperties": {
 							"source": {
-								"type": "JsonSource"
+								"type": "JsonSource",
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "JsonReadSettings"
+								}
 							},
 							"sink": {
-								"type": "JsonSink"
+								"type": "JsonSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSettings"
+								},
+								"formatSettings": {
+									"type": "JsonWriteSettings"
+								}
 							},
 							"enableStaging": false
 						},
@@ -51,14 +65,18 @@
 							{
 								"referenceName": "source_dataset",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"path": "/sample/source"
+								}
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "sink_dataset",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"path": "/sample/sink"
+								}
 							}
 						]
 					}
