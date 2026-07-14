@@ -28,7 +28,8 @@
 				"description": "Sample copy pipeline with Key Vault-backed linked service",
 				"activities": [
 					{
-						"name": "CopyActivity_updated",
+						"name": "CopyActivity_update",
+						"description": "test description",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
